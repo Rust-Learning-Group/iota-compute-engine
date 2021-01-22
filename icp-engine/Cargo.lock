@@ -835,24 +835,13 @@ dependencies = [
 
 [[package]]
 name = "iota-compute-engine"
-version = "0.0.1"
+version = "0.1.0"
 dependencies = [
  "anyhow",
- "iota-compute-engine-macros",
  "rand 0.8.2",
  "rocket",
- "serde",
  "wasmtime",
  "wasmtime-wasi",
-]
-
-[[package]]
-name = "iota-compute-engine-macros"
-version = "0.0.1"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
 ]
 
 [[package]]

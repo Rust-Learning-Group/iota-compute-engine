@@ -1,0 +1,32 @@
+[package]
+name = "iota-compute-engine"
+version = "0.0.1"
+authors = ["huhn511 <huhn.dev@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "engine_lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "engine"
+path = "src/main.rs"
+
+[features]
+default = ["derive"]
+simulated = []
+derive = ["iota-compute-engine-macros"]
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = { git = "https://github.com/SergioBenitez/Rocket", branch = "master" }
+rand = "0.8.2"
+anyhow = "1.0.38"
+serde = { version = "1", features = ["derive"] }
+
+wasmtime = "0.22.0"
+wasmtime-wasi = "0.22.0"
+
+iota-compute-engine-macros = { path = "../icp-macros", version = "0.0.1", optional = true}
