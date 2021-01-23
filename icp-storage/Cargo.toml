@@ -1,0 +1,16 @@
+[package]
+name = "iota-compute-engine-storage"
+version = "0.0.1"
+authors = ["huhn511 <huhn.dev@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "icp_storage"
+path = "src/lib.rs"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+zbox = { version = "0.9.1", features = ["libsodium-bundled", "storage-file"] }
+anyhow = "^1.0.33"

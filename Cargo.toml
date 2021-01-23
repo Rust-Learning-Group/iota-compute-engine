@@ -1,10 +1,12 @@
 [workspace]
 members = [
     "icp-engine",
-    "icp-macros"
+    "icp-macros",
+    "icp-storage"
 ]
 
 exclude = [
   "example",
-  "wasi"
+  "wasi",
+  "examples/wasm",
 ]

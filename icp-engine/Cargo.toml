@@ -29,4 +29,8 @@ serde = { version = "1", features = ["derive"] }
 wasmtime = "0.22.0"
 wasmtime-wasi = "0.22.0"
 
+iota-core = { git = "https://github.com/iotaledger/iota.rs", branch = "dev", default-features = false}
+
+
+iota-compute-engine-storage = { path = "../icp-storage", version = "0.0.1" }
 iota-compute-engine-macros = { path = "../icp-macros", version = "0.0.1", optional = true}
