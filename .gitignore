@@ -1,4 +1,4 @@
 /target
 wasi/target
 example/target
-upload
+upload/*
