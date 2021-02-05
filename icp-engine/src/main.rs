@@ -153,6 +153,7 @@ async fn check(address: String) -> String {
         .with_node("https://api.lb-0.testnet.chrysalis2.com") // chrysalis2 pubblic testnet node
         .unwrap()
         .finish()
+        .await
         .unwrap();
 
     let balance = iota
@@ -161,7 +162,7 @@ async fn check(address: String) -> String {
         .await
         .unwrap();
 
-    format!("Address: {}, Balance: {}", address, balance)
+    format!("Address: {}, Balance: {:?}", address, balance)
 }
 
 #[get("/health")]
@@ -170,6 +171,7 @@ async fn health() -> String {
         .with_node("https://api.lb-0.testnet.chrysalis2.com") // chrysalis2 pubblic testnet node
         .unwrap()
         .finish()
+        .await
         .unwrap();
 
     let r = iota

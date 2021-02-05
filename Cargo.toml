@@ -2,7 +2,9 @@
 members = [
     "icp-engine",
     "icp-macros",
-    "icp-storage"
+    "icp-storage",
+    "icp-cli",
+    # "icp-wallet"
 ]
 
 exclude = [

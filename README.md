@@ -18,7 +18,7 @@ This builds a WASM file located in `wasi/target/wasm32-wasi/debug/wasi.wasm`.
 
 2. Run app
 ```bash
-cargo run
+cargo run --bin engine
 ```
 
 3. Run WASI

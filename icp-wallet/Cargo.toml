@@ -1,0 +1,19 @@
+[package]
+name = "iota-compute-engine-wallet"
+version = "0.0.1"
+authors = ["huhn511 <huhn.dev@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "icp_wallet"
+path = "src/lib.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "^1.0.33"
+iota-wallet = { git = "https://github.com/iotaledger/wallet.rs", branch = "develop", features = ["ledger-nano", "ledger-nano-simulator"] }
+tokio = { version = "1.0", features = ["full"] }
+
+[patch.crates-io]
+paho-mqtt = { git = "https://github.com/rajivshah3/paho.mqtt.rust", branch = "feature/openssl-static-link-master-0.9"}
