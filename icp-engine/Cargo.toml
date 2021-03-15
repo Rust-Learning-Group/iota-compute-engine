@@ -22,6 +22,8 @@ derive = ["iota-compute-engine-macros"]
 
 [dependencies]
 rocket = { git = "https://github.com/SergioBenitez/Rocket", branch = "master" }
+rocket_contrib = { git = "https://github.com/SergioBenitez/Rocket", branch = "master" }
+
 rand = "0.8.2"
 anyhow = "1.0.38"
 serde = { version = "1", features = ["derive"] }

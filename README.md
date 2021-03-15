@@ -33,3 +33,11 @@ WebAssembly Text Format (WAT) is a human-readable 1:1 transformation of WebAssem
 
 answer.wat
 Function `answer` returns `42`.
+
+
+## Deployment
+
+Push to heroku: 
+```bash
+git push heroku main:master
+```

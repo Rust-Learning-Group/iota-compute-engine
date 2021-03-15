@@ -22,3 +22,22 @@ https://webassembly.github.io/wabt/demo/wasm2wat/
 
 Copy the output to the `example.wat` file.
 
+
+wasm-opt -O3 target/wasm32-wasi/debug/wasm-example.wasm -o ./example.wasm
+
+wasm-strip example.wasm
+
+
+
+
+
+
+
+index message
+
+[
+    {id: 0, message_id; ""},
+    {id: 1, message_id; ""},
+    {id: 2, message_id; ""},
+    {id: 3, message_id; ""},
+]

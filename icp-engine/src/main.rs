@@ -279,12 +279,15 @@ fn index() -> &'static str {
           retrieves the content for the paste with id `<id>`
     "
 }
+use rocket_contrib::serve::{StaticFiles, crate_relative};
 
 #[launch]
 fn rocket() -> rocket::Rocket {
 
     // icp_storage::init(); <-- If we call this function, the rocket server will not start anymore.
 
-    rocket::ignite().mount("/", routes![index, upload, retrieve, wasi, wasm, run, run2, check, health])
+    rocket::ignite()
+        .mount("/engine", routes![index, upload, retrieve, wasi, wasm, run, run2, check, health])
+        .mount("/", StaticFiles::from(crate_relative!("../frontend/public")))
 }
 
